@@ -1,9 +1,13 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const port = 5000;
 
 app.use(cors()); 
+
+// Dummy root endpoint for testing
+app.get('/', (req, res) => {
+    res.send('API is running. Access endpoints like /random-quests');
+});
 
 const quests = [
     "Dance like nobody’s watching for 2 minutes.",
@@ -70,6 +74,4 @@ app.get('/random-quests', (req, res) => {
     res.json(randomQuests);
 });
 
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
-});
+module.exports = app;
