@@ -57,6 +57,10 @@ const quests = [
     "Tell a story with a funny accent (even if it’s bad!)."
 ];
 
+app.get('/', (req, res) => {
+    res.send('Backend is working! Use /random-quests to fetch quests.');
+});
+
 
 app.get('/random-quests', (req, res) => {
     const randomQuests = [];
