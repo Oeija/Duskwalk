@@ -15,7 +15,7 @@ function App() {
 
   const fetchRandomQuests = async () => {
       try {
-          const response = await axios.get('http://localhost:5000/random-quests');
+          const response = await axios.get('https://duskwalk-server.vercel.app/random-quests');
           setRandomQuests(response.data); 
       } catch (error) {
           console.error('Error fetching random quests:', error);
