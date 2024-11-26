@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const port = 5000;
 
 app.use(cors()); 
 
@@ -70,7 +69,5 @@ app.get('/random-quests', (req, res) => {
     res.json(randomQuests);
 });
 
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
-});
+module.exports = app;
 
